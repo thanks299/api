@@ -4,10 +4,10 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware to handle CORS
+// Middleware
 app.use(cors());
 
-// Endpoint to return the required JSON response
+// Route to handle GET request
 app.get("/", (req, res) => {
   const response = {
     email: "thanksagbeble@gmail.com", 
@@ -17,7 +17,6 @@ app.get("/", (req, res) => {
   res.status(200).json(response);
 });
 
-// Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:5000`);
 });
